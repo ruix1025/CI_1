@@ -1,6 +1,8 @@
 FROM node:8-alpine
+WORKDIR /app/
+COPY . /app/
 RUN npm install
 RUN npm run build
 
 FROM nginx
-COPY build /usr/share/nginx/html
+COPY /app/build/ /usr/share/nginx/html
