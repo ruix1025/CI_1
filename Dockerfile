@@ -1,5 +1,6 @@
 FROM node:8-alpine
-WORKDIR ./
+WORKDIR /app/
+COPY . /app/
 RUN npm run build
 
 FROM nginx
