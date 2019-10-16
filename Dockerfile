@@ -5,4 +5,4 @@ RUN npm install
 RUN npm run build
 
 FROM nginx
-COPY /app/build /usr/share/nginx/html
+COPY /app/build/ /usr/share/nginx/html
